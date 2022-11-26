@@ -11,25 +11,6 @@ h1 {
   margin: 0;
 }
 
-p {
-  margin: 0 auto;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-p:first-letter {
-  text-transform: capitalize;
-}
-
-footer {
-  margin: 0 auto;
-  margin-top: 0;
-}
-
-footer:first-letter {
-  text-transform: capitalize;
-}
-
 ul {
   margin: 0 0 10px;
   padding: 0;
@@ -74,102 +55,7 @@ li {
   margin-bottom: 20px;
 }
 
-.btn-primary-location {
-  display: block;
-  margin: o auto;
-  height: 35px;
-  width: 110px;
-  background: rgb(45, 164, 238);
-  color: black;
-  border-color: #0c0985;
-}
 .card {
   background-color: aquamarine;
   margin: 15px auto;
-}
-
-.conteiner {
-  border: 2px solid #9da1ac;
-  border-radius: 10px;
-  padding: 0;
-  display: block;
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 6%;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  display: inline;
-}
-
-li:first-letter {
-  text-transform: capitalize;
-}
-
-.humidity {
-  display: list-item;
-  text-align: right;
-  margin-right: -60%;
-  margin-top: -38%;
-}
-
-.wind {
-  display: list-item;
-  text-align: right;
-  margin-right: -59%;
-}
-
-.icon {
-  margin: -5%;
-  margin-bottom: 4%;
-}
-
-.weather {
-  margin-left: 3%;
-  font-size: 60px;
-}
-
-.celsium {
-  margin-left: 0%;
-  font-size: 15px;
-  display: inline-block;
-  line-height: 35px;
-  margin-top: 5px;
-  padding-left: 0px;
-  vertical-align: top;
-}
-
-small {
-  margin-left: 40%;
-}
-
-.celsium .active {
-  color: black;
-  text-decoration-line: none;
-  cursor: default;
-}
-
-.celsium .active:hover {
-  text-decoration: none;
-}
-
-.weather-forecast {
-  margin-bottom: 2%;
-  margin-left: 2%;
-  margin-top: 0%;
-  text-align: center;
-}
-
-.weather-date {
-  font-size: 18px;
-  text-align: center;
-}
-
-.weather-temperature {
-  font-size: 15px;
-  text-align: center;
 }
