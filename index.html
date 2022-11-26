@@ -10,6 +10,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -41,7 +42,8 @@
         <h1 id="city">Kyiv, Ukraine</h1>
         <ul>
           <li id="date"></li>
-          <li>Cloudy</li>
+          <li id="description"></li>
+          
         </ul>
         <div class="row">
           <div class="col-6">
@@ -52,7 +54,7 @@
                 class="weather-icon float-left"
               />
               <div class="float-left">
-                <span class="temperature" id="temperature">19</span
+                <span class="temperature" id="temperature"></span
                 ><span class="units">
                   <a href="#" id="celsius-link">°C</a> |
                   <a href="#" id="fahrenheit-link">°F</a>
@@ -62,9 +64,14 @@
           </div>
           <div class="col-6">
             <ul>
-              <li>Pressure: 747 mb</li>
-              <li>Humidity: 82%</li>
-              <li>Wind: 4 km/h</li>
+              <ul>
+                    <li class="humidity">
+                        Humidity: <span id="humidity"></span>%
+                    </li>
+                    <li class="wind">
+                        Wind: <span id="wind"></span> Km/H
+                    </li>
+                </ul>
             </ul>
           </div>
         </div>
