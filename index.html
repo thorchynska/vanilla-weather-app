@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -11,11 +11,12 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
-  
-   <body>
+
+  <body>
     <div class="container">
       <div class="weather-app">
         <form class="search-form" id="search-form">
@@ -35,54 +36,53 @@
                 type="submit"
                 value="Search"
                 class="form-control btn btn-primary shadow-sm"
-              />
+                />
             </div>
           </div>
+<br/>
+      <div class="col-3">
+            
+        <button class="btn btn-primary-location shadow-sm" id="search-location">Current </button>   
+            </div>
+       
         </form>
         <h1 id="city">Kyiv, Ukraine</h1>
-        <ul>
-          <li id="date"></li>
-          <li id="description"></li>
-          
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <img
-                src="http://openweathermap.org/img/wn/04d@2x.png"
-                alt="Cloudy"
-                class="weather-icon float-left"
-              />
-              <div class="float-left">
-                <span class="temperature" id="temperature"></span
-                ><span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span>
-              </div>
+        <p id="date">
+        </p>
+        <footer id="description">
+        </footer>
+
+   <div class="raw">
+            <div class="col-6">
+                <ul>
+                    <li> <img width=130 id="icon" class="icon" />
+                    </li>
+                    <li id="weather" class="weather"></li>
+                    <li class="celsium"><a href="#" id="celsius" class="active">°C</a>|<a href="#" id="farenheit">°F</a>
+                    </li>
+                </ul>
             </div>
-          </div>
-          <div class="col-6">
-            <ul>
-              <ul>
+            <div class="col-6">
+                <ul>
                     <li class="humidity">
-                        Humidity: <span id="humidity"></span>%
+                        humidity: <span id="humidity"></span>%
                     </li>
                     <li class="wind">
                         Wind: <span id="wind"></span> Km/H
                     </li>
                 </ul>
-            </ul>
-          </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <script src="src/index.js"></script>
-  </body>
-</html>
+        <br /> 
 
+        <div class="weather-forecast" id="forecast">
+        </div>
+    </div>
+     
+</div>
+    </div>
    <small>
-        <a href="https://github.com/thorchynska/vanilla-weather-app" target="_blank" >Open-source code</a> by Tetiana Horchynska    </small>
+        <a href="https://github.com/thorchynska/my-nice-weather-app" target="_blank" >Open-source code</a> by Tetiana Horchynska    </small>
 
     <script src="src/index.js"></script>
   </body>
