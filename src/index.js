@@ -30,36 +30,6 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-function displayForecast(response) {
-  let forecast = response.data.daily;
-  let forecastElement = document.querySelector("#forecast");
-
-  let days = ["Wed", "Thu", "Fri", "Sut"];
-
-  let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay, index) {
-    if (index < 6)
-      forecastHTML =
-        forecastHTML +
-        `<div class="col-2">
-                    <div class="weather-date">${formatDay(forecastDay.dt)}</div>
-                    <img src="http://openweathermap.org/img/wn/${
-                      forecastDay.weather[0].icon
-                    }@2x.png" width=60 />
-                    <div class="weather-temperature">
-                        <span class="temperature-max">${Math.round(
-                          forecastDay.temp.max
-                        )}°| </span>
-                        <span class="temperature-min">${Math.round(
-                          forecastDay.temp.min
-                        )}° </span>
-                    </div>
-                </div>`;
-  });
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
-
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "40bd5a14c8867bc38ccf817c35e7d916";
@@ -77,6 +47,12 @@ function displayWeather(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
 }
