@@ -30,9 +30,9 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
-
   let days = ["Thu", "Fri", "Sat", "Sun"];
 
   let forecastHTML = `<div class="row">`;
@@ -67,6 +67,7 @@ function getForecast(coordinates) {
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
+
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   celsiusTemperature = response.data.main.temp;
