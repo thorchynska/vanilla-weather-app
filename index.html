@@ -19,75 +19,84 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-9">
-              <input
-                type="search"
-                placeholder="Type a city..."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm"
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
                 />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="form-control btn btn-primary shadow-sm"
+                />
+              </div>
+            </div>
+            <br />
+            <div class="col-3">
+              <button
+                class="btn btn-primary-location shadow-sm"
+                id="search-location"
+              >
+                Current
+              </button>
+            </div>
+          </form>
+          <div class="overview">
+            <h1 id="city">Kyiv</h1>
+            <p id="date"></p>
+            <footer id="description"></footer>
+          </div>
+          <div class="raw">
+            <div class="col-6">
+              <ul>
+                <li>
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                    width="60"
+                    id="icon"
+                    class="icon"
+                  />
+                </li>
+                <li id="weather" class="weather"></li>
+                <li class="celsium">
+                  <a href="#" id="celsius" class="active">°C</a>|<a
+                    href="#"
+                    id="farenheit"
+                    >°F</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li class="humidity">Humidity: <span id="humidity"></span>%</li>
+                <li class="wind">Wind: <span id="wind"></span> Km/H</li>
+              </ul>
             </div>
           </div>
-<br/>
-      <div class="col-3">
-            
-        <button class="btn btn-primary-location shadow-sm" id="search-location">Current </button>   
-            </div>
-       
-        </form>
-        <div class="overview">
-        <h1 id="city">Kyiv</h1>
-        <p id="date">
-        </p>
-        <footer id="description">
-        </footer>
+          <br />
 
-</div>
-   <div class="raw">
-            <div class="col-6">
-                <ul>
-                    <li> <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" width=60 id="icon" class="icon" />
-                    </li>
-                    <li id="weather" class="weather"></li>
-                    <li class="celsium"><a href="#" id="celsius" class="active">°C</a>|<a href="#" id="farenheit">°F</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-6">
-                <ul>
-                    <li class="humidity">
-                        Humidity: <span id="humidity"></span>%
-                    </li>
-                    <li class="wind">
-                        Wind: <span id="wind"></span> Km/H
-                    </li>
-                </ul>
-            </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
-        <br /> 
-
-        <div class="weather-forecast" id="forecast">
-        </div>
+        <small>
+          <a
+            href="https://github.com/thorchynska/vanilla-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Tetiana Horchynska
+        </small>
+      </div>
     </div>
-     
-    <small>
-        <a href="https://github.com/thorchynska/vanilla-weather-app" target="_blank" >Open-source code</a> by Tetiana Horchynska    </small>
- </div>
-</div>
-</div>
-   
     <script src="src/index.js"></script>
   </body>
 </html>
